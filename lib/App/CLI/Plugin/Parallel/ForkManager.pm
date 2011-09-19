@@ -8,7 +8,7 @@ App::CLI::Plugin::Parallel::ForkManager - for App::CLI::Extension fork plugin mo
 
 =head1 VERSION
 
-1.01
+1.1
 
 =head1 SYNOPSIS
 
@@ -121,11 +121,11 @@ return Parallel::ForkManager object.
 
 use strict;
 use warnings;
-use base qw(Class::Data::Accessor);
+use base qw(Class::Accessor::Grouped);
 use Parallel::ForkManager;
 
-__PACKAGE__->mk_classaccessor("pm");
-our $VERSION = '1.01';
+__PACKAGE__->mk_group_accessors(inherited => "pm");
+our $VERSION = '1.1';
 
 sub setup {
 

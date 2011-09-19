@@ -3,8 +3,9 @@ name 'App-CLI-Plugin-Parallel-ForkManager';
 all_from 'lib/App/CLI/Plugin/Parallel/ForkManager.pm';
 
 requires (
-	"App::CLI::Extension"   => 1.2,
-	"Parallel::ForkManager" => 0.7
+	"App::CLI::Extension"      => 1.4,
+	"Parallel::ForkManager"    => 0.7,
+    "Class::Accessor::Grouped" => 0,
 );
 
 tests 't/*.t';
